@@ -59,4 +59,12 @@ public class Note {
             contenido = contenido.substring(0,15);
         return contenido;
     }
+
+    public Note clone(){
+        Note notaClonada = new Note();
+        notaClonada.setContent(this.content);
+        notaClonada.setTitle(this.title);
+        notaClonada.setTimestamp(LocalDateTime.now());
+        return notaClonada;
+    }
 }
