@@ -53,7 +53,10 @@ public class Note {
     }
 
     public String getSummary() {
-        // not implemented
-        return "";
+        String contenido = getContent();
+        int largoContenido = contenido.length();
+        if(15<largoContenido)
+            contenido = contenido.substring(0,15);
+        return contenido;
     }
 }
